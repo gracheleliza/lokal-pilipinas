@@ -48,10 +48,7 @@ function Cover() {
           textAlign="center"
         >
           <MDTypography variant="h4" fontWeight="medium" color="white" mt={1}>
-            Join us today
-          </MDTypography>
-          <MDTypography display="block" variant="button" color="white" my={1}>
-            Enter your email and password to register
+            Create an Account
           </MDTypography>
         </MDBox>
         <MDBox pt={4} pb={3} px={3}>

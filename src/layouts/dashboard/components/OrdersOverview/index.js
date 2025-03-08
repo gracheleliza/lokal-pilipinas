@@ -29,7 +29,7 @@ function OrdersOverview() {
     <Card sx={{ height: "100%" }}>
       <MDBox pt={3} px={3}>
         <MDTypography variant="h6" fontWeight="medium">
-          Orders overview
+          Emergency Alerts / Disaster Updates
         </MDTypography>
         <MDBox mt={0} mb={2}>
           <MDTypography variant="button" color="text" fontWeight="regular">
@@ -38,42 +38,49 @@ function OrdersOverview() {
             </MDTypography>
             &nbsp;
             <MDTypography variant="button" color="text" fontWeight="medium">
-              24%
+              Barangay
             </MDTypography>{" "}
-            this month
+            Santo Tomas
           </MDTypography>
         </MDBox>
       </MDBox>
       <MDBox p={2}>
         <TimelineItem
           color="success"
-          icon="notifications"
-          title="$2400, Design changes"
-          dateTime="22 DEC 7:20 PM"
+          icon="cloud"
+          title="Weather Alerts"
+          description="Typhoons, heavy rainfall warnings, and heat advisories."
         />
         <TimelineItem
           color="error"
-          icon="inventory_2"
-          title="New order #1832412"
-          dateTime="21 DEC 11 PM"
+          icon="warning"
+          title="Disaster Updates"
+          description="Earthquakes, floods, or landslides affecting the barangay."
         />
         <TimelineItem
           color="info"
-          icon="shopping_cart"
-          title="Server payments for April"
-          dateTime="21 DEC 9:34 PM"
+          icon="place"
+          title="Evacuation Notices"
+          description="Locations of evacuation centers and relief distribution points."
         />
         <TimelineItem
           color="warning"
-          icon="payment"
-          title="New card added for order #4395133"
-          dateTime="20 DEC 2:20 AM"
-        />
-        <TimelineItem
-          color="primary"
-          icon="vpn_key"
-          title="New card added for order #4395133"
-          dateTime="18 DEC 4:54 AM"
+          icon="place"
+          title="Emergency Contacts"
+          description={
+            <>
+              STAC Hotline: 0921-907-8886
+              <br />
+              <a
+                href="https://www.gov.ph/the-government/hotlines"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#1e88e5", textDecoration: "none", fontWeight: "bold" }}
+              >
+                Government Hotlines
+              </a>
+            </>
+          }
           lastItem
         />
       </MDBox>

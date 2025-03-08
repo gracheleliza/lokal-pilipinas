@@ -117,6 +117,11 @@ const colors = {
       state: "#43A047",
     },
 
+    lokalgrey: {
+      main: "#485266",
+      state: "#485266",
+    },
+
     warning: {
       main: "#FFA726",
       state: "#FB8C00",

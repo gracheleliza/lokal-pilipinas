@@ -110,15 +110,25 @@ function DefaultNavbar({ transparent, light, action }) {
           pl={{ xs: 0, lg: 1 }}
         >
           <MDTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-            Material Dashboard 2
+            Lokal Pilipinas
           </MDTypography>
         </MDBox>
         <MDBox color="inherit" display={{ xs: "none", lg: "flex" }} m={0} p={0}>
-          <DefaultNavbarLink icon="donut_large" name="dashboard" route="/dashboard" light={light} />
-          <DefaultNavbarLink icon="person" name="profile" route="/profile" light={light} />
+          <DefaultNavbarLink
+            icon="warning"
+            name="Report An Issue"
+            route="/report-issue"
+            light={light}
+          />
+          <DefaultNavbarLink
+            icon="description"
+            name="Document Request"
+            route="/document-request"
+            light={light}
+          />
           <DefaultNavbarLink
             icon="account_circle"
-            name="sign up"
+            name="Register Now!"
             route="/authentication/sign-up"
             light={light}
           />

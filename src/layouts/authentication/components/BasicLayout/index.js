@@ -36,7 +36,7 @@ function BasicLayout({ image, children }) {
         action={{
           type: "external",
           route: "https://creative-tim.com/product/material-dashboard-react",
-          label: "Talk to Chatbot Now",
+          label: "Talk to Chatbot",
           color: "dark",
         }}
       />

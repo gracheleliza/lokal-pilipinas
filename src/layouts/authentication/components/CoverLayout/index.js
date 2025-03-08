@@ -37,7 +37,8 @@ function CoverLayout({ coverHeight, image, children }) {
         action={{
           type: "external",
           route: "https://creative-tim.com/product/material-dashboard-react",
-          label: "free download",
+          label: "Talk to Chatbot Now",
+          color: "dark",
         }}
         transparent
         light
