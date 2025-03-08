@@ -1,0 +1,98 @@
+[debug] [2025-03-07T14:28:16.305Z] ----------------------------------------------------------------------
+[debug] [2025-03-07T14:28:16.309Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\grachelching\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-03-07T14:28:16.310Z] CLI Version:   13.33.0
+[debug] [2025-03-07T14:28:16.310Z] Platform:      win32
+[debug] [2025-03-07T14:28:16.310Z] Node Version:  v22.14.0
+[debug] [2025-03-07T14:28:16.311Z] Time:          Fri Mar 07 2025 22:28:16 GMT+0800 (Australian Western Standard Time)
+[debug] [2025-03-07T14:28:16.311Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-07T14:28:16.322Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-07T14:28:16.322Z] > authorizing via signed-in user (grachelelizaching@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\grachelching\Downloads\lokal-pilipinas-main\backend
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-03-07T14:29:54.941Z] Checked if tokens are valid: true, expires at: 1741361208541
+[debug] [2025-03-07T14:29:54.941Z] Checked if tokens are valid: true, expires at: 1741361208541
+[debug] [2025-03-07T14:29:54.944Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-03-07T14:29:55.776Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-03-07T14:29:55.776Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project lokal-pilipinas (Lokal Pilipinas) 
+[info] 
+=== Dataconnect Setup
+[debug] [2025-03-07T14:29:59.226Z] Checked if tokens are valid: true, expires at: 1741361208541
+[debug] [2025-03-07T14:29:59.226Z] Checked if tokens are valid: true, expires at: 1741361208541
+[debug] [2025-03-07T14:29:59.226Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/lokal-pilipinas/billingInfo [none]
+[debug] [2025-03-07T14:30:02.646Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/lokal-pilipinas/billingInfo 200
+[debug] [2025-03-07T14:30:02.646Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/lokal-pilipinas/billingInfo {"name":"projects/lokal-pilipinas/billingInfo","projectId":"lokal-pilipinas","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2025-03-07T14:30:02.647Z] Checked if tokens are valid: true, expires at: 1741361208541
+[debug] [2025-03-07T14:30:02.647Z] Checked if tokens are valid: true, expires at: 1741361208541
+[debug] [2025-03-07T14:30:02.647Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lokal-pilipinas/services/sqladmin.googleapis.com [none]
+[debug] [2025-03-07T14:30:02.648Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lokal-pilipinas/services/sqladmin.googleapis.com x-goog-quota-user=projects/lokal-pilipinas
+[debug] [2025-03-07T14:30:06.416Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lokal-pilipinas/services/sqladmin.googleapis.com 200
+[debug] [2025-03-07T14:30:06.417Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lokal-pilipinas/services/sqladmin.googleapis.com [omitted]
+[warn] !  dataconnect: missing required API sqladmin.googleapis.com. Enabling now... 
+[debug] [2025-03-07T14:30:06.419Z] Checked if tokens are valid: true, expires at: 1741361208541
+[debug] [2025-03-07T14:30:06.419Z] Checked if tokens are valid: true, expires at: 1741361208541
+[debug] [2025-03-07T14:30:06.419Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/lokal-pilipinas/services/sqladmin.googleapis.com:enable [none]
+[debug] [2025-03-07T14:30:06.419Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/lokal-pilipinas/services/sqladmin.googleapis.com:enable x-goog-quota-user=projects/lokal-pilipinas
+[debug] [2025-03-07T14:30:06.888Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/lokal-pilipinas/services/sqladmin.googleapis.com:enable 200
+[debug] [2025-03-07T14:30:06.888Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/lokal-pilipinas/services/sqladmin.googleapis.com:enable [omitted]
+[debug] [2025-03-07T14:30:16.894Z] Checked if tokens are valid: true, expires at: 1741361208541
+[debug] [2025-03-07T14:30:16.895Z] Checked if tokens are valid: true, expires at: 1741361208541
+[debug] [2025-03-07T14:30:16.896Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lokal-pilipinas/services/sqladmin.googleapis.com [none]
+[debug] [2025-03-07T14:30:16.896Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lokal-pilipinas/services/sqladmin.googleapis.com x-goog-quota-user=projects/lokal-pilipinas
+[debug] [2025-03-07T14:30:18.303Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lokal-pilipinas/services/sqladmin.googleapis.com 200
+[debug] [2025-03-07T14:30:18.304Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lokal-pilipinas/services/sqladmin.googleapis.com [omitted]
+[info] +  dataconnect: required API sqladmin.googleapis.com is enabled 
+[info] +  Wrote dataconnect\dataconnect.yaml 
+[info] +  Wrote dataconnect\schema\schema.gql 
+[info] +  Wrote dataconnect\connector\connector.yaml 
+[info] +  Wrote dataconnect\connector\queries.gql 
+[info] +  Wrote dataconnect\connector\mutations.gql 
+[info] +  Detected WEB app in directory C:\Users\grachelching\Downloads\lokal-pilipinas-main\backend 
+[info] i  Wrote new config to C:\Users\grachelching\Downloads\lokal-pilipinas-main\backend\dataconnect\connector/connector.yaml 
+[info] i  dataconnect: downloading dataconnect-emulator-1.8.4.exe... {"metadata":{"emulator":{"name":"dataconnect"},"message":"downloading dataconnect-emulator-1.8.4.exe..."}}
+[debug] [2025-03-07T14:30:42.585Z] >>> [apiv2][query] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-windows-v1.8.4 
+[debug] [2025-03-07T14:30:43.347Z] <<< [apiv2][status] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-windows-v1.8.4 200
+[debug] [2025-03-07T14:30:43.347Z] <<< [apiv2][body] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-windows-v1.8.4 [stream]
+[info] I0307 22:32:26.761350    6544 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "C:\\Users\\grachelching\\Downloads\\lokal-pilipinas-main\\backend\\dataconnect-generated\\js\\default-connector"
+I0307 22:32:26.771307    6544 generate.go:40] Generated all sources. Writing them to disk...
+I0307 22:32:26.803471    6544 collector.go:107] connector "default" javascriptSdk wrote into "C:\\Users\\grachelching\\Downloads\\lokal-pilipinas-main\\backend\\dataconnect-generated\\js\\default-connector"
+Generated sources: esm\package.json [17B] index.cjs.js [146B] package.json [895B] react\index.d.ts [228B] react\package.json [468B] react\README.md [5443B] esm\index.esm.js [110B] README.md [2800B] react\esm\package.json [17B] react\index.cjs.js [0B] react\esm\index.esm.js [0B] index.d.ts [246B] 
+I0307 22:32:26.816624    6544 installsdk.go:76] Running command: C:\Program Files\nodejs\npm.cmd install file:dataconnect-generated\js\default-connector
+
+[info] i  Generated SDK code for default 
+[info] +  If you'd like to add more generated SDKs to your app your later, run firebase init dataconnect:sdk again 
+[info] i  If you'd like to provision a CloudSQL Postgres instance on the Firebase Data Connect no-cost trial:
+1. Please upgrade to the pay-as-you-go (Blaze) billing plan. Visit the following page:
+     https://console.firebase.google.com/project/lokal-pilipinas/usage/details
+2. Run firebase init dataconnect again to configure the Cloud SQL instance.
+3. Run firebase deploy --only dataconnect to deploy your Data Connect service. 
+[info] 
+=== Hosting Setup
+[debug] [2025-03-07T14:32:50.824Z] Checked if tokens are valid: true, expires at: 1741361208541
+[debug] [2025-03-07T14:32:50.824Z] Checked if tokens are valid: true, expires at: 1741361208541
+[debug] [2025-03-07T14:32:50.824Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lokal-pilipinas [none]
+[debug] [2025-03-07T14:32:51.326Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lokal-pilipinas 200
+[debug] [2025-03-07T14:32:51.326Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lokal-pilipinas {"projectId":"lokal-pilipinas","projectNumber":"754693896898","displayName":"Lokal Pilipinas","name":"projects/lokal-pilipinas","resources":{"hostingSite":"lokal-pilipinas"},"state":"ACTIVE","etag":"1_23107ed8-ace2-4d66-90d3-7a9271318d11"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
