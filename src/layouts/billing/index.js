@@ -253,7 +253,7 @@ function DocumentRequests() {
                 py={3}
                 px={2}
                 variant="gradient"
-                bgColor="info"
+                bgColor="dark"
                 borderRadius="lg"
                 coloredShadow="info"
               >
