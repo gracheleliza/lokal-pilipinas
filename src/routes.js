@@ -51,7 +51,7 @@ import Icon from "@mui/material/Icon";
 const routes = [
   {
     type: "collapse",
-    name: "Home",
+    name: "Dashboard",
     key: "dashboard",
     icon: <Icon fontSize="small">dashboard</Icon>,
     route: "/dashboard",
@@ -76,17 +76,17 @@ const routes = [
   {
     type: "collapse",
     name: "Announcements",
-    key: "notifications",
+    key: "announcements",
     icon: <Icon fontSize="small">notifications</Icon>,
-    route: "/notifications",
+    route: "/announcements",
     component: <Notifications />,
   },
   {
     type: "collapse",
     name: "User Profile",
-    key: "profile",
+    key: "user-profile",
     icon: <Icon fontSize="small">person</Icon>,
-    route: "/profile",
+    route: "/user-profile",
     component: <Profile />,
   },
   {
@@ -100,9 +100,9 @@ const routes = [
   {
     type: "collapse",
     name: "Register",
-    key: "sign-up",
+    key: "register",
     icon: <Icon fontSize="small">assignment</Icon>,
-    route: "/authentication/sign-up",
+    route: "/authentication/register",
     component: <SignUp />,
   },
   {

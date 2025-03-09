@@ -104,9 +104,9 @@ function DashboardNavbar({ absolute, light, isMini }) {
       onClose={handleCloseMenu}
       sx={{ mt: 2 }}
     >
-      <NotificationItem icon={<Icon>email</Icon>} title="Check new messages" />
-      <NotificationItem icon={<Icon>podcasts</Icon>} title="Manage Podcast sessions" />
-      <NotificationItem icon={<Icon>shopping_cart</Icon>} title="Payment successfully completed" />
+      <NotificationItem icon={<Icon>logout</Icon>} title="Sign-out" />
+      <NotificationItem icon={<Icon>person</Icon>} title="Edit Profile" />
+      <NotificationItem icon={<Icon>help</Icon>} title="Help and Support" />
     </Menu>
   );
 
@@ -174,7 +174,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
                 variant="contained"
                 onClick={handleOpenMenu}
               >
-                <Icon sx={iconsStyle}>notifications</Icon>
+                <Icon sx={iconsStyle}>menu</Icon>
               </IconButton>
               {renderMenu()}
             </MDBox>

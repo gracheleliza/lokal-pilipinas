@@ -37,7 +37,7 @@ function CoverLayout({ coverHeight, image, children }) {
         action={{
           type: "external",
           route: "https://creative-tim.com/product/material-dashboard-react",
-          label: "Talk to Chatbot Now",
+          label: "Talk to Chatbot Now!",
           color: "dark",
         }}
         transparent
@@ -48,7 +48,7 @@ function CoverLayout({ coverHeight, image, children }) {
         minHeight={coverHeight}
         borderRadius="xl"
         mx={2}
-        my={2}
+        mt={2}
         pt={6}
         pb={28}
         sx={{
@@ -63,9 +63,9 @@ function CoverLayout({ coverHeight, image, children }) {
           backgroundRepeat: "no-repeat",
         }}
       />
-      <MDBox mt={{ xs: -20, lg: -18 }} px={1} width="calc(100% - 2rem)" mx="auto">
-        <Grid container spacing={1} justifyContent="center">
-          <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>
+      <MDBox mt={{ xs: -30, lg: -18 }} mx="auto">
+        <Grid container justifyContent="center">
+          <Grid item xs={12} sm={11} md={10} lg={9} xl={8}>
             {children}
           </Grid>
         </Grid>

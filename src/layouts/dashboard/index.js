@@ -15,6 +15,7 @@ Coded by www.creative-tim.com
 
 // @mui material components
 import Grid from "@mui/material/Grid";
+import MDTypography from "components/MDTypography";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -35,18 +36,35 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 
+// Images
+import logoImage from "../../assets/images/logo-ad.jpg";
+
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
 
   return (
     <DashboardLayout>
       <DashboardNavbar />
+      <MDBox display="flex" justifyContent="center" py={2}>
+        <img
+          src={logoImage}
+          alt="Lokal Pilipinas Logo"
+          style={{
+            width: "100%", // Adjust size as needed
+            height: "auto",
+            objectFit: "cover",
+            objectPosition: "center",
+            borderRadius: "12px", // Rounded corners
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Optional shadow
+          }}
+        />
+      </MDBox>
       <MDBox py={3}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
-                color="dark"
+                color="error"
                 icon="warning"
                 title="Issues Reported"
                 count={281}
@@ -90,7 +108,7 @@ function Dashboard() {
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
-                color="primary"
+                color="warning"
                 icon="person_add"
                 title="Active Barangay"
                 count="+91"

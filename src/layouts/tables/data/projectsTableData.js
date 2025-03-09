@@ -23,16 +23,9 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
 import MDProgress from "components/MDProgress";
+import MDButton from "components/MDButton";
 
-// Images
-import LogoAsana from "assets/images/small-logos/logo-asana.svg";
-import logoGithub from "assets/images/small-logos/github.svg";
-import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
-import logoSlack from "assets/images/small-logos/logo-slack.svg";
-import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
-import logoInvesion from "assets/images/small-logos/logo-invision.svg";
-
-export default function data() {
+export default function projectsTableData() {
   const Project = ({ image, name }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
       <MDAvatar src={image} name={name} size="sm" variant="rounded" />
@@ -55,126 +48,99 @@ export default function data() {
 
   return {
     columns: [
-      { Header: "project", accessor: "project", width: "30%", align: "left" },
-      { Header: "budget", accessor: "budget", align: "left" },
-      { Header: "status", accessor: "status", align: "center" },
-      { Header: "completion", accessor: "completion", align: "center" },
-      { Header: "action", accessor: "action", align: "center" },
+      { Header: "Report ID", accessor: "id", align: "left" },
+      { Header: "Issue Category", accessor: "category", align: "left" },
+      { Header: "Barangay", accessor: "barangay", align: "left" },
+      { Header: "Description", accessor: "description", align: "left" },
+      { Header: "Reported By", accessor: "reportedBy", align: "left" },
+      { Header: "Date Reported", accessor: "dateReported", align: "left" },
+      { Header: "Status", accessor: "status", align: "center" },
+      { Header: "Actions", accessor: "actions", align: "center" },
     ],
 
     rows: [
       {
-        project: <Project image={LogoAsana} name="Asana" />,
-        budget: (
-          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
-            $2,500
-          </MDTypography>
-        ),
-        status: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            working
-          </MDTypography>
-        ),
-        completion: <Progress color="info" value={60} />,
-        action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
-          </MDTypography>
+        id: "RP-00123",
+        category: "Road Issue",
+        barangay: "Barangay 1",
+        description: "Pothole causing traffic issues",
+        reportedBy: "Juan Dela Cruz",
+        dateReported: "2025-03-09",
+        status: "Pending",
+        actions: (
+          <MDButton variant="text" color="info">
+            View
+          </MDButton>
         ),
       },
       {
-        project: <Project image={logoGithub} name="Github" />,
-        budget: (
-          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
-            $5,000
-          </MDTypography>
-        ),
-        status: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            done
-          </MDTypography>
-        ),
-        completion: <Progress color="success" value={100} />,
-        action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
-          </MDTypography>
+        id: "RP-00124",
+        category: "Garbage & Waste",
+        barangay: "Barangay 5",
+        description: "Uncollected garbage for 3 days",
+        reportedBy: "Anonymous",
+        dateReported: "2025-03-08",
+        status: "In Progress",
+        actions: (
+          <MDButton variant="text" color="info">
+            View
+          </MDButton>
         ),
       },
       {
-        project: <Project image={logoAtlassian} name="Atlassian" />,
-        budget: (
-          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
-            $3,400
-          </MDTypography>
-        ),
-        status: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            canceled
-          </MDTypography>
-        ),
-        completion: <Progress color="error" value={30} />,
-        action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
-          </MDTypography>
+        id: "RP-00125",
+        category: "Flood Problem",
+        barangay: "Barangay 3",
+        description: "Clogged drainage causing flooding",
+        reportedBy: "Maria Santos",
+        dateReported: "2025-03-07",
+        status: "Resolved",
+        actions: (
+          <MDButton variant="text" color="info">
+            View
+          </MDButton>
         ),
       },
       {
-        project: <Project image={logoSpotify} name="Spotify" />,
-        budget: (
-          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
-            $14,000
-          </MDTypography>
-        ),
-        status: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            working
-          </MDTypography>
-        ),
-        completion: <Progress color="info" value={80} />,
-        action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
-          </MDTypography>
+        id: "RP-00126",
+        category: "Fire Emergency",
+        barangay: "Barangay 2",
+        description: "Electrical fire near market area",
+        reportedBy: "Carlos Dizon",
+        dateReported: "2025-03-06",
+        status: "Under Investigation",
+        actions: (
+          <MDButton variant="text" color="info">
+            View
+          </MDButton>
         ),
       },
       {
-        project: <Project image={logoSlack} name="Slack" />,
-        budget: (
-          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
-            $1,000
-          </MDTypography>
-        ),
-        status: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            canceled
-          </MDTypography>
-        ),
-        completion: <Progress color="error" value={0} />,
-        action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
-          </MDTypography>
+        id: "RP-00127",
+        category: "Animal Control",
+        barangay: "Barangay 4",
+        description: "Stray dogs attacking pedestrians",
+        reportedBy: "Rosario Mendoza",
+        dateReported: "2025-03-05",
+        status: "Pending",
+        actions: (
+          <MDButton variant="text" color="info">
+            View
+          </MDButton>
         ),
       },
       {
-        project: <Project image={logoInvesion} name="Invesion" />,
-        budget: (
-          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
-            $2,300
-          </MDTypography>
-        ),
-        status: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            done
-          </MDTypography>
-        ),
-        completion: <Progress color="success" value={100} />,
-        action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
-          </MDTypography>
+        id: "RP-00128",
+        category: "Community Disturbance",
+        barangay: "Barangay 6",
+        description: "Loud music late at night",
+        reportedBy: "Anonymous",
+        dateReported: "2025-03-04",
+        status: "Resolved",
+        actions: (
+          <MDButton variant="text" color="info">
+            View
+          </MDButton>
         ),
       },
     ],

@@ -101,7 +101,6 @@ function Footer({ company, links }) {
 Footer.defaultProps = {
   company: { href: "https://github.com/gracheleliza", name: "Grachel Ching" },
   links: [
-    { href: "https://github.com/gracheleliza", name: "Grachel Ching" },
     { href: "https://github.com/gracheleliza", name: "About Us" },
     { href: "https://github.com/gracheleliza", name: "Blog" },
     { href: "https://github.com/gracheleliza", name: "License" },

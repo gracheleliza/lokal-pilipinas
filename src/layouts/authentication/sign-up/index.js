@@ -19,6 +19,7 @@ import { Link } from "react-router-dom";
 // @mui material components
 import Card from "@mui/material/Card";
 import Checkbox from "@mui/material/Checkbox";
+import MenuItem from "@mui/material/MenuItem";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -38,12 +39,12 @@ function Cover() {
       <Card>
         <MDBox
           variant="gradient"
-          bgColor="info"
+          bgColor="dark"
           borderRadius="lg"
           coloredShadow="success"
           mx={2}
           mt={-3}
-          p={3}
+          p={2}
           mb={1}
           textAlign="center"
         >
@@ -53,24 +54,56 @@ function Cover() {
         </MDBox>
         <MDBox pt={4} pb={3} px={3}>
           <MDBox component="form" role="form">
-            <MDBox mb={2}>
-              <MDInput type="text" label="Name" variant="standard" fullWidth />
+            <MDBox mb={2} display="flex" gap={3}>
+              <MDInput type="text" label="First Name" variant="standard" fullWidth />
+              <MDInput type="text" label="Last Name" variant="standard" fullWidth />
+              <MDInput
+                type="date"
+                label="Date of Birth"
+                variant="standard"
+                fullWidth
+                InputLabelProps={{ shrink: true }}
+              />
             </MDBox>
-            <MDBox mb={2}>
-              <MDInput type="email" label="Email" variant="standard" fullWidth />
+            <MDBox mb={2} display="flex" gap={3}>
+              <MDInput type="email" label="E-mail Address" variant="standard" fullWidth />
+              <MDInput type="tel" label="Mobile Number" variant="standard" fullWidth />
+              <MDInput type="text" label="Street Address" variant="standard" fullWidth />
             </MDBox>
-            <MDBox mb={2}>
-              <MDInput type="password" label="Password" variant="standard" fullWidth />
+            <MDBox mb={2} display="flex" gap={3}>
+              <MDInput select label="Province" variant="standard" fullWidth>
+                <MenuItem value="">Select Province</MenuItem>
+                {/* Add province options here */}
+              </MDInput>
+              <MDInput select label="City" variant="standard" fullWidth>
+                <MenuItem value="">Select City</MenuItem>
+                {/* Add city options here */}
+              </MDInput>
+              <MDInput select label="Baranggay" variant="standard" fullWidth>
+                <MenuItem value="">Select Baranggay</MenuItem>
+                {/* Add baranggay options here */}
+              </MDInput>
             </MDBox>
-            <MDBox display="flex" alignItems="center" ml={-1}>
+            <MDBox mb={2} display="flex" gap={3}>
+              <MDInput type="password" label="Preferred Password" variant="standard" fullWidth />
+              <MDInput type="password" label="Confirm Password" variant="standard" fullWidth />
+              <MDInput
+                type="file"
+                label="Upload Valid ID"
+                variant="standard"
+                fullWidth
+                InputLabelProps={{ shrink: true }}
+              />
+            </MDBox>
+            <MDBox display="flex" alignItems="center" justifyContent="center">
               <Checkbox />
               <MDTypography
                 variant="button"
                 fontWeight="regular"
                 color="text"
-                sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
+                sx={{ cursor: "pointer", userSelect: "none" }}
               >
-                &nbsp;&nbsp;I agree the&nbsp;
+                &nbsp;&nbsp;I agree to the&nbsp;
               </MDTypography>
               <MDTypography
                 component="a"
@@ -83,25 +116,10 @@ function Cover() {
                 Terms and Conditions
               </MDTypography>
             </MDBox>
-            <MDBox mt={4} mb={1}>
+            <MDBox display="flex" justifyContent="center">
               <MDButton variant="gradient" color="info" fullWidth>
-                sign in
+                Sign Up
               </MDButton>
-            </MDBox>
-            <MDBox mt={3} mb={1} textAlign="center">
-              <MDTypography variant="button" color="text">
-                Already have an account?{" "}
-                <MDTypography
-                  component={Link}
-                  to="/authentication/sign-in"
-                  variant="button"
-                  color="info"
-                  fontWeight="medium"
-                  textGradient
-                >
-                  Sign In
-                </MDTypography>
-              </MDTypography>
             </MDBox>
           </MDBox>
         </MDBox>

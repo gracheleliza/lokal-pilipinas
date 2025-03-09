@@ -23,12 +23,12 @@ import MDAvatar from "components/MDAvatar";
 import MDProgress from "components/MDProgress";
 
 // Images
-import logoXD from "assets/images/small-logos/logo-xd.svg";
-import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
-import logoSlack from "assets/images/small-logos/logo-slack.svg";
-import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
-import logoJira from "assets/images/small-logos/logo-jira.svg";
-import logoInvesion from "assets/images/small-logos/logo-invision.svg";
+import logoHealth from "assets/images/small-logos/health.svg";
+import logoEnvironment from "assets/images/small-logos/environment.svg";
+import logoCommunity from "assets/images/small-logos/community.svg";
+import logoUtility from "assets/images/small-logos/utility.svg";
+import logoInfra from "assets/images/small-logos/infrastructure.svg";
+import logoInformation from "assets/images/small-logos/information.svg";
 import team1 from "assets/images/team-1.jpg";
 import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
@@ -71,104 +71,61 @@ export default function data() {
 
   return {
     columns: [
-      { Header: "title", accessor: "companies", width: "60%", align: "left" },
-      { Header: "barangay", accessor: "members", width: "10%", align: "left" },
-      { Header: "views", accessor: "completion", align: "center" },
+      { Header: "announcement", accessor: "announcement", width: "60%", align: "left" },
+      { Header: "date", accessor: "date", width: "10%", align: "center" },
+      { Header: "views", accessor: "views", width: "30%", align: "center" },
     ],
 
     rows: [
       {
-        companies: <Company image={logoXD} name="Free Medical Check-Up & Vaccination" />,
-        members: (
-          <MDBox display="flex" py={1}>
-            {avatars([
-              [team1, "Ryan Tompson"],
-              [team2, "Romina Hadid"],
-              [team3, "Alexander Smith"],
-              [team4, "Jessica Doe"],
-            ])}
-          </MDBox>
-        ),
-        completion: (
+        announcement: <Company image={logoHealth} name="Free Medical Check-Up & Vaccination" />,
+        date: "March 10, 2025",
+        views: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={60} color="info" variant="gradient" label={false} />
           </MDBox>
         ),
       },
       {
-        companies: <Company image={logoAtlassian} name="Cleanup Drive" />,
-        members: (
-          <MDBox display="flex" py={1}>
-            {avatars([
-              [team2, "Romina Hadid"],
-              [team4, "Jessica Doe"],
-            ])}
-          </MDBox>
-        ),
-        completion: (
+        announcement: <Company image={logoEnvironment} name="Cleanup Drive" />,
+        date: "March 12, 2025",
+        views: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={10} color="info" variant="gradient" label={false} />
           </MDBox>
         ),
       },
       {
-        companies: <Company image={logoSlack} name="Curfew Reminder" />,
-        members: (
-          <MDBox display="flex" py={1}>
-            {avatars([
-              [team1, "Ryan Tompson"],
-              [team3, "Alexander Smith"],
-            ])}
-          </MDBox>
-        ),
-        completion: (
+        announcement: <Company image={logoCommunity} name="Curfew Reminder" />,
+        date: "March 15, 2025",
+        views: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={100} color="success" variant="gradient" label={false} />
           </MDBox>
         ),
       },
       {
-        companies: <Company image={logoSpotify} name="Scheduled Power Interruption" />,
-        members: (
-          <MDBox display="flex" py={1}>
-            {avatars([
-              [team4, "Jessica Doe"],
-              [team3, "Alexander Smith"],
-              [team2, "Romina Hadid"],
-              [team1, "Ryan Tompson"],
-            ])}
-          </MDBox>
-        ),
-        completion: (
+        announcement: <Company image={logoUtility} name="Scheduled Power Interruption" />,
+        date: "March 18, 2025",
+        views: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={100} color="success" variant="gradient" label={false} />
           </MDBox>
         ),
       },
       {
-        companies: <Company image={logoJira} name="Road Closure Advisory" />,
-        members: (
-          <MDBox display="flex" py={1}>
-            {avatars([[team4, "Jessica Doe"]])}
-          </MDBox>
-        ),
-        completion: (
+        announcement: <Company image={logoInfra} name="Road Closure Advisory" />,
+        date: "March 20, 2025",
+        views: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={25} color="info" variant="gradient" label={false} />
           </MDBox>
         ),
       },
       {
-        companies: <Company image={logoInvesion} name="Barangay Assembly Meeting" />,
-        members: (
-          <MDBox display="flex" py={1}>
-            {avatars([
-              [team1, "Ryan Tompson"],
-              [team4, "Jessica Doe"],
-            ])}
-          </MDBox>
-        ),
-        completion: (
+        announcement: <Company image={logoInformation} name="Barangay Assembly Meeting" />,
+        date: "March 22, 2025",
+        views: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={40} color="info" variant="gradient" label={false} />
           </MDBox>

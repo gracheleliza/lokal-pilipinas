@@ -129,12 +129,12 @@ function DefaultNavbar({ transparent, light, action }) {
           <DefaultNavbarLink
             icon="account_circle"
             name="Register Now!"
-            route="/authentication/sign-up"
+            route="/authentication/register"
             light={light}
           />
           <DefaultNavbarLink
             icon="key"
-            name="sign in"
+            name="Sign in"
             route="/authentication/sign-in"
             light={light}
           />
@@ -171,7 +171,7 @@ function DefaultNavbar({ transparent, light, action }) {
         <MDBox
           display={{ xs: "inline-block", lg: "none" }}
           lineHeight={0}
-          py={1.5}
+          pt={1.5}
           pl={1.5}
           color="inherit"
           sx={{ cursor: "pointer" }}
