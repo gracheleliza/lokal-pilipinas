@@ -25,7 +25,7 @@ import MDAvatar from "components/MDAvatar";
 import MDProgress from "components/MDProgress";
 import MDButton from "components/MDButton";
 
-export default function projectsTableData() {
+export default function issuesTableData() {
   const Project = ({ image, name }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
       <MDAvatar src={image} name={name} size="sm" variant="rounded" />
